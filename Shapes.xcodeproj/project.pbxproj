@@ -8,12 +8,82 @@
 
 /* Begin PBXBuildFile section */
 		8F4DD2011E912D360062DC12 /* Shapes.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F4DD1FF1E912D360062DC12 /* Shapes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F4DD2081E912D510062DC12 /* AnimatableShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4DD2071E912D510062DC12 /* AnimatableShapeLayer.swift */; };
+		8FA466571E92911700005E5E /* UIBezierPath+Gear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA466541E92911700005E5E /* UIBezierPath+Gear.swift */; };
+		8FA466581E92911700005E5E /* UIBezierPath+Heart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA466551E92911700005E5E /* UIBezierPath+Heart.swift */; };
+		8FA466591E92911700005E5E /* UIBezierPath+Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA466561E92911700005E5E /* UIBezierPath+Polygon.swift */; };
+		8FA4665B1E92912500005E5E /* UIBezierPath+Drop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA4665A1E92912500005E5E /* UIBezierPath+Drop.swift */; };
+		8FA4665F1E92938A00005E5E /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA4665E1E92938A00005E5E /* CGFloat.swift */; };
+		8FF278A41E912F44009960C9 /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF278A31E912F44009960C9 /* ShapeView.swift */; };
+		8FF278AE1E91320F009960C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF278AD1E91320F009960C9 /* AppDelegate.swift */; };
+		8FF278B01E91320F009960C9 /* StarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF278AF1E91320F009960C9 /* StarViewController.swift */; };
+		8FF278B31E91320F009960C9 /* Star.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF278B11E91320F009960C9 /* Star.storyboard */; };
+		8FF278B51E91320F009960C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FF278B41E91320F009960C9 /* Assets.xcassets */; };
+		8FF278B81E91320F009960C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF278B61E91320F009960C9 /* LaunchScreen.storyboard */; };
+		8FF278BE1E913257009960C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF278BD1E913257009960C9 /* Main.storyboard */; };
+		8FF278BF1E9132ED009960C9 /* Shapes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4DD1FC1E912D360062DC12 /* Shapes.framework */; };
+		8FF278C01E9132ED009960C9 /* Shapes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4DD1FC1E912D360062DC12 /* Shapes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8FF278C51E91339F009960C9 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF278C41E91339F009960C9 /* Random.swift */; };
+		8FF278C71E913894009960C9 /* UIBezierPath+Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF278C61E913894009960C9 /* UIBezierPath+Star.swift */; };
+		8FF278C91E9138C6009960C9 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF278C81E9138C6009960C9 /* CGPoint.swift */; };
+		8FF278CB1E923D42009960C9 /* UIBezierPath+Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF278CA1E923D42009960C9 /* UIBezierPath+Ring.swift */; };
+		8FF278CF1E923FD6009960C9 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF278CE1E923FD6009960C9 /* Shape.swift */; };
+		8FF278D11E92563F009960C9 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF278D01E92563F009960C9 /* CGRect.swift */; };
+		8FF278D31E92571B009960C9 /* Shape.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF278D21E92571B009960C9 /* Shape.storyboard */; };
+		8FF278D51E9257A4009960C9 /* ShapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF278D41E9257A4009960C9 /* ShapeViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8FF278C11E9132ED009960C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F4DD1F31E912D360062DC12 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F4DD1FB1E912D360062DC12;
+			remoteInfo = Shapes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8FF278C31E9132ED009960C9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8FF278C01E9132ED009960C9 /* Shapes.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8F4DD1FC1E912D360062DC12 /* Shapes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shapes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F4DD1FF1E912D360062DC12 /* Shapes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shapes.h; sourceTree = "<group>"; };
 		8F4DD2001E912D360062DC12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F4DD2071E912D510062DC12 /* AnimatableShapeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableShapeLayer.swift; sourceTree = "<group>"; };
+		8FA466541E92911700005E5E /* UIBezierPath+Gear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Gear.swift"; sourceTree = "<group>"; };
+		8FA466551E92911700005E5E /* UIBezierPath+Heart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Heart.swift"; sourceTree = "<group>"; };
+		8FA466561E92911700005E5E /* UIBezierPath+Polygon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Polygon.swift"; sourceTree = "<group>"; };
+		8FA4665A1E92912500005E5E /* UIBezierPath+Drop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Drop.swift"; sourceTree = "<group>"; };
+		8FA4665E1E92938A00005E5E /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
+		8FF278A31E912F44009960C9 /* ShapeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
+		8FF278AB1E91320F009960C9 /* ShapesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShapesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FF278AD1E91320F009960C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8FF278AF1E91320F009960C9 /* StarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarViewController.swift; sourceTree = "<group>"; };
+		8FF278B21E91320F009960C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Star.storyboard; sourceTree = "<group>"; };
+		8FF278B41E91320F009960C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8FF278B71E91320F009960C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8FF278B91E91320F009960C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FF278BD1E913257009960C9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8FF278C41E91339F009960C9 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		8FF278C61E913894009960C9 /* UIBezierPath+Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Star.swift"; sourceTree = "<group>"; };
+		8FF278C81E9138C6009960C9 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
+		8FF278CA1E923D42009960C9 /* UIBezierPath+Ring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Ring.swift"; sourceTree = "<group>"; };
+		8FF278CE1E923FD6009960C9 /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		8FF278D01E92563F009960C9 /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
+		8FF278D21E92571B009960C9 /* Shape.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Shape.storyboard; sourceTree = "<group>"; };
+		8FF278D41E9257A4009960C9 /* ShapeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +94,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8FF278A81E91320F009960C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FF278BF1E9132ED009960C9 /* Shapes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -31,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				8F4DD1FE1E912D360062DC12 /* Shapes */,
+				8FF278AC1E91320F009960C9 /* ShapesDemo */,
 				8F4DD1FD1E912D360062DC12 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				8F4DD1FC1E912D360062DC12 /* Shapes.framework */,
+				8FF278AB1E91320F009960C9 /* ShapesDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -47,9 +127,38 @@
 			isa = PBXGroup;
 			children = (
 				8F4DD1FF1E912D360062DC12 /* Shapes.h */,
+				8FF278CE1E923FD6009960C9 /* Shape.swift */,
+				8F4DD2071E912D510062DC12 /* AnimatableShapeLayer.swift */,
+				8FF278A31E912F44009960C9 /* ShapeView.swift */,
+				8FF278C61E913894009960C9 /* UIBezierPath+Star.swift */,
+				8FF278CA1E923D42009960C9 /* UIBezierPath+Ring.swift */,
+				8FA4665A1E92912500005E5E /* UIBezierPath+Drop.swift */,
+				8FA466541E92911700005E5E /* UIBezierPath+Gear.swift */,
+				8FA466551E92911700005E5E /* UIBezierPath+Heart.swift */,
+				8FA466561E92911700005E5E /* UIBezierPath+Polygon.swift */,
+				8FF278C81E9138C6009960C9 /* CGPoint.swift */,
+				8FF278D01E92563F009960C9 /* CGRect.swift */,
+				8FA4665E1E92938A00005E5E /* CGFloat.swift */,
 				8F4DD2001E912D360062DC12 /* Info.plist */,
 			);
 			path = Shapes;
+			sourceTree = "<group>";
+		};
+		8FF278AC1E91320F009960C9 /* ShapesDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8FF278AD1E91320F009960C9 /* AppDelegate.swift */,
+				8FF278C41E91339F009960C9 /* Random.swift */,
+				8FF278BD1E913257009960C9 /* Main.storyboard */,
+				8FF278B11E91320F009960C9 /* Star.storyboard */,
+				8FF278AF1E91320F009960C9 /* StarViewController.swift */,
+				8FF278D21E92571B009960C9 /* Shape.storyboard */,
+				8FF278D41E9257A4009960C9 /* ShapeViewController.swift */,
+				8FF278B41E91320F009960C9 /* Assets.xcassets */,
+				8FF278B61E91320F009960C9 /* LaunchScreen.storyboard */,
+				8FF278B91E91320F009960C9 /* Info.plist */,
+			);
+			path = ShapesDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,16 +193,42 @@
 			productReference = 8F4DD1FC1E912D360062DC12 /* Shapes.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		8FF278AA1E91320F009960C9 /* ShapesDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FF278BA1E91320F009960C9 /* Build configuration list for PBXNativeTarget "ShapesDemo" */;
+			buildPhases = (
+				8FF278A71E91320F009960C9 /* Sources */,
+				8FF278A81E91320F009960C9 /* Frameworks */,
+				8FF278A91E91320F009960C9 /* Resources */,
+				8FF278C31E9132ED009960C9 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FF278C21E9132ED009960C9 /* PBXTargetDependency */,
+			);
+			name = ShapesDemo;
+			productName = ShapesDemo;
+			productReference = 8FF278AB1E91320F009960C9 /* ShapesDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		8F4DD1F31E912D360062DC12 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Silverback IT";
 				TargetAttributes = {
 					8F4DD1FB1E912D360062DC12 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9HQR3Y4WE5;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					8FF278AA1E91320F009960C9 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 9HQR3Y4WE5;
 						ProvisioningStyle = Automatic;
@@ -106,6 +241,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 8F4DD1F21E912D360062DC12;
 			productRefGroup = 8F4DD1FD1E912D360062DC12 /* Products */;
@@ -113,6 +249,7 @@
 			projectRoot = "";
 			targets = (
 				8F4DD1FB1E912D360062DC12 /* Shapes */,
+				8FF278AA1E91320F009960C9 /* ShapesDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -125,6 +262,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8FF278A91E91320F009960C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FF278B81E91320F009960C9 /* LaunchScreen.storyboard in Resources */,
+				8FF278B51E91320F009960C9 /* Assets.xcassets in Resources */,
+				8FF278B31E91320F009960C9 /* Star.storyboard in Resources */,
+				8FF278D31E92571B009960C9 /* Shape.storyboard in Resources */,
+				8FF278BE1E913257009960C9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -132,10 +281,60 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FA466591E92911700005E5E /* UIBezierPath+Polygon.swift in Sources */,
+				8FA466571E92911700005E5E /* UIBezierPath+Gear.swift in Sources */,
+				8FF278A41E912F44009960C9 /* ShapeView.swift in Sources */,
+				8FA4665B1E92912500005E5E /* UIBezierPath+Drop.swift in Sources */,
+				8FA466581E92911700005E5E /* UIBezierPath+Heart.swift in Sources */,
+				8F4DD2081E912D510062DC12 /* AnimatableShapeLayer.swift in Sources */,
+				8FF278C91E9138C6009960C9 /* CGPoint.swift in Sources */,
+				8FF278C71E913894009960C9 /* UIBezierPath+Star.swift in Sources */,
+				8FA4665F1E92938A00005E5E /* CGFloat.swift in Sources */,
+				8FF278CB1E923D42009960C9 /* UIBezierPath+Ring.swift in Sources */,
+				8FF278CF1E923FD6009960C9 /* Shape.swift in Sources */,
+				8FF278D11E92563F009960C9 /* CGRect.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FF278A71E91320F009960C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FF278D51E9257A4009960C9 /* ShapeViewController.swift in Sources */,
+				8FF278B01E91320F009960C9 /* StarViewController.swift in Sources */,
+				8FF278AE1E91320F009960C9 /* AppDelegate.swift in Sources */,
+				8FF278C51E91339F009960C9 /* Random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8FF278C21E9132ED009960C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F4DD1FB1E912D360062DC12 /* Shapes */;
+			targetProxy = 8FF278C11E9132ED009960C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8FF278B11E91320F009960C9 /* Star.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FF278B21E91320F009960C9 /* Base */,
+			);
+			name = Star.storyboard;
+			sourceTree = "<group>";
+		};
+		8FF278B61E91320F009960C9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FF278B71E91320F009960C9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8F4DD2021E912D360062DC12 /* Debug */ = {
@@ -240,6 +439,28 @@
 		8F4DD2051E912D360062DC12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9HQR3Y4WE5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Shapes/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.silverback-it.Shapes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8F4DD2061E912D360062DC12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9HQR3Y4WE5;
@@ -254,23 +475,32 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
-			name = Debug;
+			name = Release;
 		};
-		8F4DD2061E912D360062DC12 /* Release */ = {
+		8FF278BB1E91320F009960C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9HQR3Y4WE5;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Shapes/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.silverback-it.Shapes";
+				INFOPLIST_FILE = ShapesDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.silverback-it.ShapesDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8FF278BC1E91320F009960C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9HQR3Y4WE5;
+				INFOPLIST_FILE = ShapesDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.silverback-it.ShapesDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -294,6 +524,16 @@
 				8F4DD2061E912D360062DC12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FF278BA1E91320F009960C9 /* Build configuration list for PBXNativeTarget "ShapesDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FF278BB1E91320F009960C9 /* Debug */,
+				8FF278BC1E91320F009960C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="g6l-rd-sOG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shape View Controller-->
+        <scene sceneID="AVY-5q-IXb">
+            <objects>
+                <viewController id="g6l-rd-sOG" customClass="ShapeViewController" customModule="ShapesDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="erK-Ti-GlR"/>
+                        <viewControllerLayoutGuide type="bottom" id="WKd-0j-GJR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m7J-mI-tG8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2Z-1v-voi">
+                                <rect key="frame" x="16" y="28" width="343" height="595"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZJ-1a-h8t" customClass="ShapeView" customModule="Shapes">
+                                        <rect key="frame" x="72" y="198" width="200" height="200"/>
+                                        <color key="backgroundColor" red="0.0" green="0.68627450980000004" blue="0.94117647059999998" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xZJ-1a-h8t" secondAttribute="height" multiplier="1:1" id="EmT-Gl-ndA"/>
+                                            <constraint firstAttribute="width" priority="999" constant="200" id="a94-IX-zox"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
+                                                <real key="value" value="0.69999999999999996"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="count">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="shapeName" value="star"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.92324376722820511" green="0.22210554933043664" blue="0.58434788528775139" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="xZJ-1a-h8t" firstAttribute="centerX" secondItem="w2Z-1v-voi" secondAttribute="centerX" id="IY5-Z8-09K"/>
+                                    <constraint firstItem="xZJ-1a-h8t" firstAttribute="centerY" secondItem="w2Z-1v-voi" secondAttribute="centerY" id="noY-OW-2lg"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UzM-4G-CKN">
+                                <rect key="frame" x="16" y="631" width="343" height="29"/>
+                                <segments>
+                                    <segment title="star"/>
+                                    <segment title="disc"/>
+                                    <segment title="ring"/>
+                                    <segment title="drop"/>
+                                    <segment title="heart"/>
+                                    <segment title="gear"/>
+                                    <segment title="polygon"/>
+                                </segments>
+                                <connections>
+                                    <action selector="handleControl:" destination="g6l-rd-sOG" eventType="valueChanged" id="VSn-rm-YcK"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="UzM-4G-CKN" secondAttribute="trailing" id="50G-aI-xb6"/>
+                            <constraint firstItem="UzM-4G-CKN" firstAttribute="top" secondItem="w2Z-1v-voi" secondAttribute="bottom" constant="8" symbolic="YES" id="7YD-jo-1Df"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w2Z-1v-voi" secondAttribute="trailing" id="At6-xS-GeW"/>
+                            <constraint firstItem="w2Z-1v-voi" firstAttribute="top" secondItem="erK-Ti-GlR" secondAttribute="bottom" constant="8" symbolic="YES" id="GFG-cF-fJs"/>
+                            <constraint firstItem="w2Z-1v-voi" firstAttribute="leading" secondItem="m7J-mI-tG8" secondAttribute="leadingMargin" id="IoB-OX-FzH"/>
+                            <constraint firstItem="WKd-0j-GJR" firstAttribute="top" secondItem="UzM-4G-CKN" secondAttribute="bottom" constant="8" symbolic="YES" id="LI3-B3-IL9"/>
+                            <constraint firstItem="UzM-4G-CKN" firstAttribute="leading" secondItem="m7J-mI-tG8" secondAttribute="leadingMargin" id="qdz-e3-0Ka"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="control" destination="UzM-4G-CKN" id="NpF-Lk-0GI"/>
+                        <outlet property="shapeView" destination="xZJ-1a-h8t" id="E2z-xC-dDR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NnR-oO-u09" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="116"/>
+        </scene>
+    </scenes>
+</document>
