@@ -46,7 +46,7 @@ class StarViewController: UIViewController
             star?.fillColor = UIColor(hue: CGFloat(slider.value), saturation: 0.8, brightness: 0.8, alpha: 1)
             
         case pointsSlider!:
-            star?.count = Int(slider.value)
+            star?.repetitions = Int(slider.value)
             
         default:
             break

@@ -17,7 +17,7 @@ extension UIBezierPath
         
         guard cogs > 2 else { return }
         
-        let angle = π / CGFloat(cogs)
+        let angle = π / cogs
         
         var radius = (outerRadius, innerRadius)
         

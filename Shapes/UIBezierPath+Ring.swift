@@ -16,15 +16,19 @@ extension UIBezierPath
                             innerRadius: CGFloat,
                             outerRadius: CGFloat)
     {
-        self.init(arcCenter: center, radius: outerRadius, startAngle: 0, endAngle: .pi * 2, clockwise: true)
+        self.init(arcCenter: .zero, radius: innerRadius, startAngle: 0, endAngle: π2, clockwise: true)
         
-        close()
+//        close()
         
-        move(to: CGPoint(x: 0, y: innerRadius))
+        move(to: CGPoint(x: outerRadius, y: 0))
         
-        self.addArc(withCenter: center, radius: innerRadius, startAngle: 0, endAngle: .pi * 2, clockwise: false)
+        addArc(withCenter: .zero, radius: outerRadius, startAngle: 0, endAngle: π2, clockwise: true)
         
-        close()
+//        close()
+        
+        apply(CGAffineTransform(translationX: center.x, y: center.y))
+        
+        usesEvenOddFillRule = true
     }
 }
 

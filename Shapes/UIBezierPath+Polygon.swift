@@ -39,8 +39,8 @@ extension UIBezierPath
      - parameter turned: if *true* the polygon is rotated (counterclockwise around center) to let the rightmost edge be vertical. If *false* the rightmost corner is directly right of the center. Default is *false*
      */
     public convenience init(
-        convexRegularPolygonWithNumberOfSides n: Int,
-        center: CGPoint = CGPoint.zero,
+        convexRegularPolygonWithCenter center: CGPoint = CGPoint.zero,
+        sides n: Int,
         radius: CGFloat,
         turned: Bool = false)
     {
@@ -52,7 +52,9 @@ extension UIBezierPath
         
         for theta in (1 ..< n).map({ CGFloat($0 * 2) * .pi / CGFloat(n) } )
         {
-            addLine(to: CGPoint(x: radius * cos(theta), y: radius * sin(theta)))
+            addLine(to: CGPoint(bearing: theta, distance: radius))
+            
+//            addLine(to: CGPoint(x: radius * cos(theta), y: radius * sin(theta)))
         }
         
         close()

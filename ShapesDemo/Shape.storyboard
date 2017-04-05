@@ -40,12 +40,6 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
-                                                <real key="value" value="0.69999999999999996"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="count">
-                                                <integer key="value" value="7"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="shapeName" value="star"/>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
                                                 <color key="value" red="0.92324376722820511" green="0.22210554933043664" blue="0.58434788528775139" alpha="1" colorSpace="calibratedRGB"/>

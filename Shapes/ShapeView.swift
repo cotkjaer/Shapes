@@ -69,15 +69,15 @@ open class ShapeView: UIView
     
     /** inner radius of the shape (where applicable), relative to outer radius, should be in range ]0;1[ */
     @IBInspectable
-    open var innerRadius: CGFloat = 0.5 { didSet { if oldValue != innerRadius { updateShape() } } }
+    open var innerRadius: CGFloat? { didSet { if oldValue != innerRadius { updateShape() } } }
     
-    /** number of radial repetitions (where applicable); for a star it is the number of points, for a gear the number of spikes, etc. */
+    /** number of radial repetitions (where applicable); for a star it is the number of points, for a gear the number of cogs, etc. */
     @IBInspectable
-    open var count: Int = 5 { didSet { if oldValue != count { updateShape() } } }
+    open var repetitions: Int? { didSet { if oldValue != repetitions { updateShape() } } }
     
     /** the "softness" of the shape (where applicable), should be in range [0;1], where 0 is not soft at all and 1 is soft as a jellyfish */
     @IBInspectable
-    open var softness: CGFloat = 0.25 { didSet { if oldValue != softness { updateShape() } } }
+    open var softness: CGFloat? { didSet { if oldValue != softness { updateShape() } } }
     
     open override var bounds: CGRect
         {
