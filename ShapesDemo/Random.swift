@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - random floating points
 
-func random<T>(_ lower: T = 0, _ upper: T = 1) -> T where T: FloatingPoint, T: ExpressibleByIntegerLiteral
+func random<T>(_ lower: T = 0, _ upper: T = 1) -> T where T: FloatingPoint//, T: ExpressibleByIntegerLiteral
 {
     let t = T(Int(arc4random_uniform(10000000))) / 10000000
     

@@ -8,8 +8,7 @@
 
 extension UIBezierPath
 {
-    public convenience init(
-        polygonWithCorners corners: [CGPoint])
+    public convenience init(polygonWithCorners corners: [CGPoint])
     {
         self.init()
         

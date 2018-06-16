@@ -12,6 +12,7 @@ extension CGPoint
 {
     init(bearing: CGFloat, distance: CGFloat)
     {
+        self.init()
         x = cos(bearing) * distance
         y = sin(bearing) * distance
     }
