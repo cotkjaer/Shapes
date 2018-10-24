@@ -14,7 +14,7 @@ open class Shape
 {
     // MARK: - Factory
     
-    open static func named(_ name: String) -> Shape
+    public static func named(_ name: String) -> Shape
     {
         let shape: Shape
         
@@ -40,6 +40,9 @@ open class Shape
             
         case Polygon.name:
             shape = Polygon()
+            
+        case Obround.name:
+            shape = Obround()
             
         default:
             shape = Shape()
@@ -207,3 +210,14 @@ open class Polygon: Shape
     }
 }
 
+open class Obround: Shape
+{
+    override public class var name: String { return "obround" }
+    
+    override open func createPath(forView view: ShapeView) -> UIBezierPath
+    {
+        let delta = view.strokeWidth / 2
+        
+        return UIBezierPath(obroundIn: view.bounds.insetBy(dx: delta, dy: delta))
+    }
+}

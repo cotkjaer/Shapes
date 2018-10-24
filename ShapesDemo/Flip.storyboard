@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6U2-8S-6kM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Flip View Controller-->
+        <scene sceneID="U35-zb-yDI">
+            <objects>
+                <viewController id="6U2-8S-6kM" customClass="FlipViewController" customModule="ShapesDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rhd-pz-wGm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPQ-gD-yeb" customClass="ShapeView" customModule="Shapes">
+                                <rect key="frame" x="67" y="213" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="iFW-5d-8fF"/>
+                                    <constraint firstAttribute="width" secondItem="fPQ-gD-yeb" secondAttribute="height" multiplier="1:1" id="wee-Lp-iWF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="shapeName" value="star"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jd2-iQ-P9m" customClass="ShapeView" customModule="Shapes">
+                                <rect key="frame" x="84" y="461" width="206" height="206"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jd2-iQ-P9m" secondAttribute="height" multiplier="1:1" id="4QB-G5-oFj"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="shapeName" value="star"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="1" green="0.98489378139999995" blue="0.1984498535" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYy-vT-TZj" customClass="ShapeView" customModule="Shapes">
+                                <rect key="frame" x="84" y="461" width="206" height="206"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="shapeName" value="drop"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="g7f-WG-pNJ" firstAttribute="bottom" secondItem="jd2-iQ-P9m" secondAttribute="bottom" id="QvE-kf-1yI"/>
+                            <constraint firstItem="fPQ-gD-yeb" firstAttribute="centerX" secondItem="rhd-pz-wGm" secondAttribute="centerX" id="YU8-l7-ExH"/>
+                            <constraint firstItem="jd2-iQ-P9m" firstAttribute="top" secondItem="AYy-vT-TZj" secondAttribute="top" id="fIC-bN-eao"/>
+                            <constraint firstItem="jd2-iQ-P9m" firstAttribute="trailing" secondItem="AYy-vT-TZj" secondAttribute="trailing" id="nSV-M9-tfb"/>
+                            <constraint firstItem="jd2-iQ-P9m" firstAttribute="bottom" secondItem="AYy-vT-TZj" secondAttribute="bottom" id="pZW-TR-KIc"/>
+                            <constraint firstItem="jd2-iQ-P9m" firstAttribute="top" secondItem="fPQ-gD-yeb" secondAttribute="bottom" constant="8" symbolic="YES" id="tQI-sx-YVc"/>
+                            <constraint firstItem="jd2-iQ-P9m" firstAttribute="centerX" secondItem="rhd-pz-wGm" secondAttribute="centerX" id="wB9-Bn-b99"/>
+                            <constraint firstItem="jd2-iQ-P9m" firstAttribute="leading" secondItem="AYy-vT-TZj" secondAttribute="leading" id="xeW-4L-XhQ"/>
+                            <constraint firstItem="fPQ-gD-yeb" firstAttribute="centerY" secondItem="rhd-pz-wGm" secondAttribute="centerY" id="yJv-we-zeB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g7f-WG-pNJ"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ijD-LZ-5hg" appends="YES" id="Vk6-4P-LX7"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="drop" destination="AYy-vT-TZj" id="4jD-iP-JlF"/>
+                        <outlet property="shapeView" destination="fPQ-gD-yeb" id="HQF-wt-0KO"/>
+                        <outlet property="star" destination="jd2-iQ-P9m" id="OHy-3c-f8a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1tl-4v-You" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ijD-LZ-5hg">
+                    <connections>
+                        <action selector="handleTap:" destination="6U2-8S-6kM" id="TYF-eo-WKl"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="119" y="140"/>
+        </scene>
+    </scenes>
+</document>

@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		8F4DD2011E912D360062DC12 /* Shapes.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F4DD1FF1E912D360062DC12 /* Shapes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F4DD2081E912D510062DC12 /* AnimatableShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4DD2071E912D510062DC12 /* AnimatableShapeLayer.swift */; };
+		8F70984820D96307001F431F /* TwoSidedShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F70984720D96307001F431F /* TwoSidedShapeView.swift */; };
+		8F70984A20D96412001F431F /* Flip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F70984920D96412001F431F /* Flip.storyboard */; };
+		8F70984C20D96422001F431F /* FlipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F70984B20D96422001F431F /* FlipViewController.swift */; };
 		8FA466571E92911700005E5E /* UIBezierPath+Gear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA466541E92911700005E5E /* UIBezierPath+Gear.swift */; };
 		8FA466581E92911700005E5E /* UIBezierPath+Heart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA466551E92911700005E5E /* UIBezierPath+Heart.swift */; };
 		8FA466591E92911700005E5E /* UIBezierPath+Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA466561E92911700005E5E /* UIBezierPath+Polygon.swift */; };
 		8FA4665B1E92912500005E5E /* UIBezierPath+Drop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA4665A1E92912500005E5E /* UIBezierPath+Drop.swift */; };
 		8FA4665F1E92938A00005E5E /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA4665E1E92938A00005E5E /* CGFloat.swift */; };
+		8FC8C556217D1B8F0072BB66 /* UIBezierPath+Obround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC8C555217D1B8F0072BB66 /* UIBezierPath+Obround.swift */; };
+		8FC8C558217E67E10072BB66 /* Obround.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FC8C557217E67E10072BB66 /* Obround.storyboard */; };
+		8FC8C55A217E68260072BB66 /* ObroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC8C559217E68260072BB66 /* ObroundViewController.swift */; };
 		8FF278A41E912F44009960C9 /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF278A31E912F44009960C9 /* ShapeView.swift */; };
 		8FF278AE1E91320F009960C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF278AD1E91320F009960C9 /* AppDelegate.swift */; };
 		8FF278B01E91320F009960C9 /* StarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF278AF1E91320F009960C9 /* StarViewController.swift */; };
@@ -62,11 +68,17 @@
 		8F4DD1FF1E912D360062DC12 /* Shapes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shapes.h; sourceTree = "<group>"; };
 		8F4DD2001E912D360062DC12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F4DD2071E912D510062DC12 /* AnimatableShapeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableShapeLayer.swift; sourceTree = "<group>"; };
+		8F70984720D96307001F431F /* TwoSidedShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSidedShapeView.swift; sourceTree = "<group>"; };
+		8F70984920D96412001F431F /* Flip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Flip.storyboard; sourceTree = "<group>"; };
+		8F70984B20D96422001F431F /* FlipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipViewController.swift; sourceTree = "<group>"; };
 		8FA466541E92911700005E5E /* UIBezierPath+Gear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Gear.swift"; sourceTree = "<group>"; };
 		8FA466551E92911700005E5E /* UIBezierPath+Heart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Heart.swift"; sourceTree = "<group>"; };
 		8FA466561E92911700005E5E /* UIBezierPath+Polygon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Polygon.swift"; sourceTree = "<group>"; };
 		8FA4665A1E92912500005E5E /* UIBezierPath+Drop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Drop.swift"; sourceTree = "<group>"; };
 		8FA4665E1E92938A00005E5E /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
+		8FC8C555217D1B8F0072BB66 /* UIBezierPath+Obround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Obround.swift"; sourceTree = "<group>"; };
+		8FC8C557217E67E10072BB66 /* Obround.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Obround.storyboard; sourceTree = "<group>"; };
+		8FC8C559217E68260072BB66 /* ObroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObroundViewController.swift; sourceTree = "<group>"; };
 		8FF278A31E912F44009960C9 /* ShapeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
 		8FF278AB1E91320F009960C9 /* ShapesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShapesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF278AD1E91320F009960C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,12 +142,14 @@
 				8FF278CE1E923FD6009960C9 /* Shape.swift */,
 				8F4DD2071E912D510062DC12 /* AnimatableShapeLayer.swift */,
 				8FF278A31E912F44009960C9 /* ShapeView.swift */,
+				8F70984720D96307001F431F /* TwoSidedShapeView.swift */,
 				8FF278C61E913894009960C9 /* UIBezierPath+Star.swift */,
 				8FF278CA1E923D42009960C9 /* UIBezierPath+Ring.swift */,
 				8FA4665A1E92912500005E5E /* UIBezierPath+Drop.swift */,
 				8FA466541E92911700005E5E /* UIBezierPath+Gear.swift */,
 				8FA466551E92911700005E5E /* UIBezierPath+Heart.swift */,
 				8FA466561E92911700005E5E /* UIBezierPath+Polygon.swift */,
+				8FC8C555217D1B8F0072BB66 /* UIBezierPath+Obround.swift */,
 				8FF278C81E9138C6009960C9 /* CGPoint.swift */,
 				8FF278D01E92563F009960C9 /* CGRect.swift */,
 				8FA4665E1E92938A00005E5E /* CGFloat.swift */,
@@ -150,10 +164,14 @@
 				8FF278AD1E91320F009960C9 /* AppDelegate.swift */,
 				8FF278C41E91339F009960C9 /* Random.swift */,
 				8FF278BD1E913257009960C9 /* Main.storyboard */,
+				8FC8C557217E67E10072BB66 /* Obround.storyboard */,
+				8FC8C559217E68260072BB66 /* ObroundViewController.swift */,
 				8FF278B11E91320F009960C9 /* Star.storyboard */,
 				8FF278AF1E91320F009960C9 /* StarViewController.swift */,
 				8FF278D21E92571B009960C9 /* Shape.storyboard */,
 				8FF278D41E9257A4009960C9 /* ShapeViewController.swift */,
+				8F70984920D96412001F431F /* Flip.storyboard */,
+				8F70984B20D96422001F431F /* FlipViewController.swift */,
 				8FF278B41E91320F009960C9 /* Assets.xcassets */,
 				8FF278B61E91320F009960C9 /* LaunchScreen.storyboard */,
 				8FF278B91E91320F009960C9 /* Info.plist */,
@@ -268,6 +286,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FF278B81E91320F009960C9 /* LaunchScreen.storyboard in Resources */,
+				8F70984A20D96412001F431F /* Flip.storyboard in Resources */,
+				8FC8C558217E67E10072BB66 /* Obround.storyboard in Resources */,
 				8FF278B51E91320F009960C9 /* Assets.xcassets in Resources */,
 				8FF278B31E91320F009960C9 /* Star.storyboard in Resources */,
 				8FF278D31E92571B009960C9 /* Shape.storyboard in Resources */,
@@ -287,8 +307,10 @@
 				8FF278A41E912F44009960C9 /* ShapeView.swift in Sources */,
 				8FA4665B1E92912500005E5E /* UIBezierPath+Drop.swift in Sources */,
 				8FA466581E92911700005E5E /* UIBezierPath+Heart.swift in Sources */,
+				8FC8C556217D1B8F0072BB66 /* UIBezierPath+Obround.swift in Sources */,
 				8F4DD2081E912D510062DC12 /* AnimatableShapeLayer.swift in Sources */,
 				8FF278C91E9138C6009960C9 /* CGPoint.swift in Sources */,
+				8F70984820D96307001F431F /* TwoSidedShapeView.swift in Sources */,
 				8FF278C71E913894009960C9 /* UIBezierPath+Star.swift in Sources */,
 				8FA4665F1E92938A00005E5E /* CGFloat.swift in Sources */,
 				8FF278CB1E923D42009960C9 /* UIBezierPath+Ring.swift in Sources */,
@@ -301,9 +323,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC8C55A217E68260072BB66 /* ObroundViewController.swift in Sources */,
 				8FF278D51E9257A4009960C9 /* ShapeViewController.swift in Sources */,
 				8FF278B01E91320F009960C9 /* StarViewController.swift in Sources */,
 				8FF278AE1E91320F009960C9 /* AppDelegate.swift in Sources */,
+				8F70984C20D96422001F431F /* FlipViewController.swift in Sources */,
 				8FF278C51E91339F009960C9 /* Random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

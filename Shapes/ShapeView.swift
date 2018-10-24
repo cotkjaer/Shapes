@@ -20,7 +20,13 @@ open class ShapeView: UIView
         get { return type(of: shape).name }
     }
     
-    var shape: Shape = Shape() { didSet { updateShape() } }
+    private var _shape: Shape = Shape()
+    
+    open var shape: Shape 
+        {
+            set { _shape = newValue; updateShape() }
+            get { return _shape }
+    }
     
     // MARK: - Layer
     
@@ -97,8 +103,85 @@ open class ShapeView: UIView
     {
         let path = shape.createPath(forView: self)
         
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        
         shapeLayer?.path = path.cgPath
         
+        shapeLayer?.mask = mask
+        
         shapeLayer?.fillRule = path.usesEvenOddFillRule ? kCAFillRuleEvenOdd : kCAFillRuleNonZero
+    }
+    
+    
+    // MARK: - Flip
+    
+    private var _isFlipped: Bool = false
+    
+    @IBInspectable
+    open var isFlipped: Bool
+        {
+        get { return _isFlipped }
+        set { _isFlipped = newValue; updateUIForFlippedState(_isFlipped) }
+    }
+    
+    open func flip()
+    {
+        isFlipped = !isFlipped
+    }
+    
+    /** flips the card over with no animation - parameter is isFlipped AFTER flip
+     */
+    open var updateUIForFlippedState: (Bool)->() = { _ in }
+    
+    public enum FlipFrom
+    {
+        case top, left, right, bottom
+        
+        var animationOption: UIViewAnimationOptions
+        {
+            switch self {
+            case .top: return .transitionFlipFromTop
+            case .bottom: return .transitionFlipFromBottom
+            case .left: return .transitionFlipFromLeft
+            case .right: return .transitionFlipFromRight
+            }
+        }
+    }
+    
+    
+    
+    /** flips the card over animated
+     - parameter duration: time the flip should take
+     */
+    open func flip(duration: Double,
+                   delay: Double = 0,
+                   from: FlipFrom = .bottom,
+                   completion: ((Bool)->())? = nil)
+    {
+        UIView.animate(
+            withDuration: duration / 5,
+            delay: delay,
+            options: [.curveEaseIn],
+            animations: { self.transform = CGAffineTransform.identity.scaledBy(x: 1.1, y: 1.1) },
+            completion: { _ in
+                
+                self.superview?.bringSubview(toFront: self)
+                
+                UIView.transition(
+                    with: self,
+                    duration: 3 * duration / 5,
+                    options: [.curveLinear, from.animationOption],
+                    animations: self.flip,
+                    completion: { _ in
+                        
+                        UIView.animate(
+                            withDuration: duration / 5,
+                            delay: 0,
+                            options: [.curveEaseOut, .beginFromCurrentState],
+                            animations: { self.transform = .identity },
+                            completion: completion)
+                })
+        })
     }
 }
