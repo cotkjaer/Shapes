@@ -43,6 +43,9 @@ open class Shape
             
         case Obround.name:
             shape = Obround()
+        
+        case Squircle.name:
+            shape = Squircle()
             
         default:
             shape = Shape()
@@ -219,5 +222,17 @@ open class Obround: Shape
         let delta = view.strokeWidth / 2
         
         return UIBezierPath(obroundIn: view.bounds.insetBy(dx: delta, dy: delta))
+    }
+}
+
+open class Squircle: Shape
+{
+    override public class var name: String { return "squircle" }
+    
+    override open func createPath(forView view: ShapeView) -> UIBezierPath
+    {
+        let delta = view.strokeWidth / 2
+        
+        return UIBezierPath(squircleIn: view.bounds.insetBy(dx: delta, dy: delta), softness: view.softness)
     }
 }

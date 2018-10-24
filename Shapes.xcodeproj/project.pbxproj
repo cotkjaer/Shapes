@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8F4DD2011E912D360062DC12 /* Shapes.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F4DD1FF1E912D360062DC12 /* Shapes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F4DD2081E912D510062DC12 /* AnimatableShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4DD2071E912D510062DC12 /* AnimatableShapeLayer.swift */; };
+		8F6D25832180BA7C008EA243 /* UIBezierPath+Squircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6D25822180BA7C008EA243 /* UIBezierPath+Squircle.swift */; };
 		8F70984820D96307001F431F /* TwoSidedShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F70984720D96307001F431F /* TwoSidedShapeView.swift */; };
 		8F70984A20D96412001F431F /* Flip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F70984920D96412001F431F /* Flip.storyboard */; };
 		8F70984C20D96422001F431F /* FlipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F70984B20D96422001F431F /* FlipViewController.swift */; };
@@ -68,6 +69,7 @@
 		8F4DD1FF1E912D360062DC12 /* Shapes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shapes.h; sourceTree = "<group>"; };
 		8F4DD2001E912D360062DC12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F4DD2071E912D510062DC12 /* AnimatableShapeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableShapeLayer.swift; sourceTree = "<group>"; };
+		8F6D25822180BA7C008EA243 /* UIBezierPath+Squircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Squircle.swift"; sourceTree = "<group>"; };
 		8F70984720D96307001F431F /* TwoSidedShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSidedShapeView.swift; sourceTree = "<group>"; };
 		8F70984920D96412001F431F /* Flip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Flip.storyboard; sourceTree = "<group>"; };
 		8F70984B20D96422001F431F /* FlipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				8FA466551E92911700005E5E /* UIBezierPath+Heart.swift */,
 				8FA466561E92911700005E5E /* UIBezierPath+Polygon.swift */,
 				8FC8C555217D1B8F0072BB66 /* UIBezierPath+Obround.swift */,
+				8F6D25822180BA7C008EA243 /* UIBezierPath+Squircle.swift */,
 				8FF278C81E9138C6009960C9 /* CGPoint.swift */,
 				8FF278D01E92563F009960C9 /* CGRect.swift */,
 				8FA4665E1E92938A00005E5E /* CGFloat.swift */,
@@ -315,6 +318,7 @@
 				8FA4665F1E92938A00005E5E /* CGFloat.swift in Sources */,
 				8FF278CB1E923D42009960C9 /* UIBezierPath+Ring.swift in Sources */,
 				8FF278CF1E923FD6009960C9 /* Shape.swift in Sources */,
+				8F6D25832180BA7C008EA243 /* UIBezierPath+Squircle.swift in Sources */,
 				8FF278D11E92563F009960C9 /* CGRect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="g6l-rd-sOG">
-    <device id="retina4_7" orientation="portrait">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="g6l-rd-sOG">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,14 +19,14 @@
                         <viewControllerLayoutGuide type="bottom" id="WKd-0j-GJR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="m7J-mI-tG8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2Z-1v-voi">
-                                <rect key="frame" x="16" y="28" width="343" height="595"/>
+                                <rect key="frame" x="20" y="8" width="627" height="301"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZJ-1a-h8t" customClass="ShapeView" customModule="Shapes">
-                                        <rect key="frame" x="72" y="198" width="200" height="200"/>
+                                        <rect key="frame" x="213.5" y="50.5" width="200" height="200"/>
                                         <color key="backgroundColor" red="0.0" green="0.68627450980000004" blue="0.94117647059999998" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="xZJ-1a-h8t" secondAttribute="height" multiplier="1:1" id="EmT-Gl-ndA"/>
@@ -53,39 +52,319 @@
                                     <constraint firstItem="xZJ-1a-h8t" firstAttribute="centerY" secondItem="w2Z-1v-voi" secondAttribute="centerY" id="noY-OW-2lg"/>
                                 </constraints>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UzM-4G-CKN">
-                                <rect key="frame" x="16" y="631" width="343" height="29"/>
-                                <segments>
-                                    <segment title="star"/>
-                                    <segment title="disc"/>
-                                    <segment title="ring"/>
-                                    <segment title="drop"/>
-                                    <segment title="heart"/>
-                                    <segment title="gear"/>
-                                    <segment title="polygon"/>
-                                </segments>
-                                <connections>
-                                    <action selector="handleControl:" destination="g6l-rd-sOG" eventType="valueChanged" id="VSn-rm-YcK"/>
-                                </connections>
-                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aNh-Cb-uGR">
+                                <rect key="frame" x="16" y="317" width="631" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzx-Mj-UL8" customClass="ShapeView" customModule="Shapes">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="kzx-Mj-UL8" secondAttribute="height" multiplier="1:1" id="WNj-x7-tq8"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
+                                                <real key="value" value="0.69999999999999996"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="count">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="shapeName" value="star"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.76030306209999998" green="0.6595008389" blue="0.38860633389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="bJk-hq-YfJ" appends="YES" id="ttQ-44-MAd"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBl-av-65v" customClass="ShapeView" customModule="Shapes">
+                                        <rect key="frame" x="72.5" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="dBl-av-65v" secondAttribute="height" multiplier="1:1" id="3yg-rp-2tT"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
+                                                <real key="value" value="0.69999999999999996"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="count">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="shapeName" value="disc"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.76030306209999998" green="0.6595008389" blue="0.38860633389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zEQ-QQ-3yx" customClass="ShapeView" customModule="Shapes">
+                                        <rect key="frame" x="145.5" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zEQ-QQ-3yx" secondAttribute="height" multiplier="1:1" id="uNw-TT-BU4"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
+                                                <real key="value" value="0.69999999999999996"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="count">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="shapeName" value="ring"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.76030306209999998" green="0.6595008389" blue="0.38860633389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbd-MB-pKu" customClass="ShapeView" customModule="Shapes">
+                                        <rect key="frame" x="218" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="lbd-MB-pKu" secondAttribute="height" multiplier="1:1" id="QxC-jf-qEM"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
+                                                <real key="value" value="0.69999999999999996"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="count">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="shapeName" value="drop"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.76030306209999998" green="0.6595008389" blue="0.38860633389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLe-Sk-hhK" customClass="ShapeView" customModule="Shapes">
+                                        <rect key="frame" x="290.5" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="MLe-Sk-hhK" secondAttribute="height" multiplier="1:1" id="eo9-cv-Get"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
+                                                <real key="value" value="0.69999999999999996"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="count">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="shapeName" value="heart"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.76030306209999998" green="0.6595008389" blue="0.38860633389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dh-ti-csa" customClass="ShapeView" customModule="Shapes">
+                                        <rect key="frame" x="363" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="9dh-ti-csa" secondAttribute="height" multiplier="1:1" id="pnx-Z2-Kgt"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
+                                                <real key="value" value="0.69999999999999996"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="count">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="shapeName" value="gear"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.76030306209999998" green="0.6595008389" blue="0.38860633389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUg-eZ-xPQ" customClass="ShapeView" customModule="Shapes">
+                                        <rect key="frame" x="436" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="HUg-eZ-xPQ" secondAttribute="height" multiplier="1:1" id="801-gA-QbH"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
+                                                <real key="value" value="0.69999999999999996"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="count">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="shapeName" value="polygon"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.76030306209999998" green="0.6595008389" blue="0.38860633389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xcy-44-LrE" customClass="ShapeView" customModule="Shapes">
+                                        <rect key="frame" x="508.5" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Xcy-44-LrE" secondAttribute="height" multiplier="1:1" id="l5h-sN-P5i"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
+                                                <real key="value" value="0.69999999999999996"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="count">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="shapeName" value="obround"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.76030306209999998" green="0.6595008389" blue="0.38860633389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="4Rs-GL-3xD" appends="YES" id="ZxO-dR-US8"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6y-7d-gFl" customClass="ShapeView" customModule="Shapes">
+                                        <rect key="frame" x="581" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
+                                                <real key="value" value="0.69999999999999996"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="count">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="shapeName" value="squircle"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.76030306209999998" green="0.6595008389" blue="0.38860633389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="softness">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="h2P-1j-J4f" appends="YES" id="d1J-Yv-7lq"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zEQ-QQ-3yx" firstAttribute="width" secondItem="zEQ-QQ-3yx" secondAttribute="height" multiplier="1:1" id="4VX-TL-9W0"/>
+                                    <constraint firstItem="HUg-eZ-xPQ" firstAttribute="width" secondItem="HUg-eZ-xPQ" secondAttribute="height" multiplier="1:1" id="63B-5J-e9Q"/>
+                                    <constraint firstItem="HUg-eZ-xPQ" firstAttribute="width" secondItem="HUg-eZ-xPQ" secondAttribute="height" multiplier="1:1" id="7pE-Rm-zzp"/>
+                                    <constraint firstItem="9dh-ti-csa" firstAttribute="width" secondItem="9dh-ti-csa" secondAttribute="height" multiplier="1:1" id="AB4-GM-QcL"/>
+                                    <constraint firstItem="Xcy-44-LrE" firstAttribute="width" secondItem="Xcy-44-LrE" secondAttribute="height" multiplier="1:1" id="DF8-b6-YqB"/>
+                                    <constraint firstAttribute="height" constant="50" id="E5V-Bf-EZH"/>
+                                    <constraint firstItem="HUg-eZ-xPQ" firstAttribute="width" secondItem="HUg-eZ-xPQ" secondAttribute="height" multiplier="1:1" id="FlG-qI-f2X"/>
+                                    <constraint firstItem="9dh-ti-csa" firstAttribute="width" secondItem="9dh-ti-csa" secondAttribute="height" multiplier="1:1" id="HvU-zv-6mP"/>
+                                    <constraint firstItem="Xcy-44-LrE" firstAttribute="width" secondItem="Xcy-44-LrE" secondAttribute="height" multiplier="1:1" id="If2-Jh-WwS"/>
+                                    <constraint firstItem="MLe-Sk-hhK" firstAttribute="width" secondItem="MLe-Sk-hhK" secondAttribute="height" multiplier="1:1" id="KOe-1V-CTv"/>
+                                    <constraint firstItem="lbd-MB-pKu" firstAttribute="width" secondItem="lbd-MB-pKu" secondAttribute="height" multiplier="1:1" id="LE2-Iu-aDS"/>
+                                    <constraint firstItem="MLe-Sk-hhK" firstAttribute="width" secondItem="MLe-Sk-hhK" secondAttribute="height" multiplier="1:1" id="O0o-6N-MUz"/>
+                                    <constraint firstItem="MLe-Sk-hhK" firstAttribute="width" secondItem="MLe-Sk-hhK" secondAttribute="height" multiplier="1:1" id="QfX-FS-6HH"/>
+                                    <constraint firstItem="Xcy-44-LrE" firstAttribute="width" secondItem="Xcy-44-LrE" secondAttribute="height" multiplier="1:1" id="Rgn-Jh-8jh"/>
+                                    <constraint firstItem="lbd-MB-pKu" firstAttribute="width" secondItem="lbd-MB-pKu" secondAttribute="height" multiplier="1:1" id="RrJ-Yu-pFE"/>
+                                    <constraint firstItem="dBl-av-65v" firstAttribute="width" secondItem="dBl-av-65v" secondAttribute="height" multiplier="1:1" id="S1f-5t-5Vd"/>
+                                    <constraint firstItem="HUg-eZ-xPQ" firstAttribute="width" secondItem="HUg-eZ-xPQ" secondAttribute="height" multiplier="1:1" id="Ted-nM-emm"/>
+                                    <constraint firstItem="lbd-MB-pKu" firstAttribute="width" secondItem="lbd-MB-pKu" secondAttribute="height" multiplier="1:1" id="WHI-2O-LWc"/>
+                                    <constraint firstItem="Xcy-44-LrE" firstAttribute="width" secondItem="Xcy-44-LrE" secondAttribute="height" multiplier="1:1" id="a8v-fC-JtR"/>
+                                    <constraint firstItem="zEQ-QQ-3yx" firstAttribute="width" secondItem="zEQ-QQ-3yx" secondAttribute="height" multiplier="1:1" id="clV-9J-NTl"/>
+                                    <constraint firstItem="HUg-eZ-xPQ" firstAttribute="width" secondItem="HUg-eZ-xPQ" secondAttribute="height" multiplier="1:1" id="eH8-ob-3gL"/>
+                                    <constraint firstItem="y6y-7d-gFl" firstAttribute="width" secondItem="y6y-7d-gFl" secondAttribute="height" multiplier="1:1" id="gJP-K7-shz"/>
+                                    <constraint firstItem="9dh-ti-csa" firstAttribute="width" secondItem="9dh-ti-csa" secondAttribute="height" multiplier="1:1" id="gSM-tf-por"/>
+                                    <constraint firstItem="MLe-Sk-hhK" firstAttribute="width" secondItem="MLe-Sk-hhK" secondAttribute="height" multiplier="1:1" id="hkI-2u-pLS"/>
+                                    <constraint firstItem="Xcy-44-LrE" firstAttribute="width" secondItem="Xcy-44-LrE" secondAttribute="height" multiplier="1:1" id="nl9-XU-Y80"/>
+                                    <constraint firstItem="HUg-eZ-xPQ" firstAttribute="width" secondItem="HUg-eZ-xPQ" secondAttribute="height" multiplier="1:1" id="s1s-af-Byy"/>
+                                    <constraint firstItem="Xcy-44-LrE" firstAttribute="width" secondItem="Xcy-44-LrE" secondAttribute="height" multiplier="1:1" id="s4a-Tj-6P9"/>
+                                    <constraint firstItem="9dh-ti-csa" firstAttribute="width" secondItem="9dh-ti-csa" secondAttribute="height" multiplier="1:1" id="vKy-CP-bUd"/>
+                                    <constraint firstItem="9dh-ti-csa" firstAttribute="width" secondItem="9dh-ti-csa" secondAttribute="height" multiplier="1:1" id="xfz-wh-gqv"/>
+                                    <constraint firstItem="Xcy-44-LrE" firstAttribute="width" secondItem="Xcy-44-LrE" secondAttribute="height" multiplier="1:1" id="ydH-BW-uQb"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="UzM-4G-CKN" secondAttribute="trailing" id="50G-aI-xb6"/>
-                            <constraint firstItem="UzM-4G-CKN" firstAttribute="top" secondItem="w2Z-1v-voi" secondAttribute="bottom" constant="8" symbolic="YES" id="7YD-jo-1Df"/>
+                            <constraint firstItem="WKd-0j-GJR" firstAttribute="top" secondItem="aNh-Cb-uGR" secondAttribute="bottom" constant="8" symbolic="YES" id="8YX-UM-nOA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="w2Z-1v-voi" secondAttribute="trailing" id="At6-xS-GeW"/>
                             <constraint firstItem="w2Z-1v-voi" firstAttribute="top" secondItem="erK-Ti-GlR" secondAttribute="bottom" constant="8" symbolic="YES" id="GFG-cF-fJs"/>
                             <constraint firstItem="w2Z-1v-voi" firstAttribute="leading" secondItem="m7J-mI-tG8" secondAttribute="leadingMargin" id="IoB-OX-FzH"/>
-                            <constraint firstItem="WKd-0j-GJR" firstAttribute="top" secondItem="UzM-4G-CKN" secondAttribute="bottom" constant="8" symbolic="YES" id="LI3-B3-IL9"/>
-                            <constraint firstItem="UzM-4G-CKN" firstAttribute="leading" secondItem="m7J-mI-tG8" secondAttribute="leadingMargin" id="qdz-e3-0Ka"/>
+                            <constraint firstAttribute="trailing" secondItem="aNh-Cb-uGR" secondAttribute="trailing" constant="20" symbolic="YES" id="WyP-J5-RHe"/>
+                            <constraint firstItem="aNh-Cb-uGR" firstAttribute="top" secondItem="w2Z-1v-voi" secondAttribute="bottom" constant="8" symbolic="YES" id="YKj-BC-fzk"/>
+                            <constraint firstItem="aNh-Cb-uGR" firstAttribute="leading" secondItem="m7J-mI-tG8" secondAttribute="leading" constant="16" id="ifl-77-vZT"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="control" destination="UzM-4G-CKN" id="NpF-Lk-0GI"/>
                         <outlet property="shapeView" destination="xZJ-1a-h8t" id="E2z-xC-dDR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NnR-oO-u09" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bJk-hq-YfJ">
+                    <connections>
+                        <action selector="handleTap:" destination="g6l-rd-sOG" id="KP3-70-RLJ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="4Rs-GL-3xD">
+                    <connections>
+                        <action selector="handleTap:" destination="g6l-rd-sOG" id="dN3-VB-S1r"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="h2P-1j-J4f">
+                    <connections>
+                        <action selector="handleTap:" destination="g6l-rd-sOG" id="oql-Cj-8cS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="49" y="116"/>
         </scene>

@@ -103,12 +103,7 @@ open class ShapeView: UIView
     {
         let path = shape.createPath(forView: self)
         
-        let mask = CAShapeLayer()
-        mask.path = path.cgPath
-        
         shapeLayer?.path = path.cgPath
-        
-        shapeLayer?.mask = mask
         
         shapeLayer?.fillRule = path.usesEvenOddFillRule ? kCAFillRuleEvenOdd : kCAFillRuleNonZero
     }
